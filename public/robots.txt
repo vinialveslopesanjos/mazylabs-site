@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mazylabs.vercel.app/sitemap.xml
+Sitemap: https://mazylabs.com/sitemap.xml

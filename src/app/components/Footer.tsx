@@ -26,7 +26,7 @@ export default function Footer() {
           <span className="opacity-40 mb-1">Contato</span>
           <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-terracotta)] transition-colors">LinkedIn</a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-terracotta)] transition-colors">WhatsApp</a>
-          <a href="mailto:viniciusanjos.mazylabs@gmail.com" className="hover:text-[var(--color-terracotta)] transition-colors">Email</a>
+          <a href="mailto:vinicius.anjos@mazylabs.com" className="hover:text-[var(--color-terracotta)] transition-colors">Email</a>
         </div>
       </div>
     </footer>

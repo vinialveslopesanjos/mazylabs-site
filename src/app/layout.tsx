@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'MazyLabs | Engenharia de IA - São Paulo',
   description:
     'MazyLabs: engenharia de inteligência artificial sob medida. Prototipagem rápida, IA generativa, machine learning para negócios, visão computacional e engenharia de dados em São Paulo.',
-  metadataBase: new URL('https://mazylabs.vercel.app'),
+  metadataBase: new URL('https://mazylabs.com'),
   openGraph: {
     title: 'MazyLabs | Engenharia de IA',
     description:
       'Data science e machine learning de classe mundial, com pragmatismo brasileiro. Menos PowerPoint, mais GitHub.',
-    url: 'https://mazylabs.vercel.app',
+    url: 'https://mazylabs.com',
     siteName: 'MazyLabs',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     locale: 'pt_BR',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://mazylabs.vercel.app' },
+  alternates: { canonical: 'https://mazylabs.com' },
   icons: {
     icon: '/favicon.svg',
   },
@@ -35,8 +35,8 @@ const structuredData = {
   '@type': 'ProfessionalService',
   name: 'MazyLabs',
   description: 'Engenharia de inteligência artificial sob medida. Prototipagem rápida, IA generativa, ML para negócios.',
-  url: 'https://mazylabs.vercel.app',
-  logo: 'https://mazylabs.vercel.app/favicon.svg',
+  url: 'https://mazylabs.com',
+  logo: 'https://mazylabs.com/favicon.svg',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'São Paulo',

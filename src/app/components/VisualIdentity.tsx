@@ -20,7 +20,7 @@ export default function VisualIdentity() {
             </div>
           </div>
           <div className="relative z-10">
-            <p className="font-mono text-xs">viniciusanjos.mazylabs@gmail.com</p>
+            <p className="font-mono text-xs">vinicius.anjos@mazylabs.com</p>
             <p className="font-mono text-xs">+55 11 97981-0832</p>
             <div className="h-px w-full bg-black/10 my-4" />
             <p className="text-[9px] font-bold uppercase tracking-widest text-[#c15f3c]">MazyLabs Studio São Paulo</p>
