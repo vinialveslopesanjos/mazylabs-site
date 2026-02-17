@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terracotta: #c15f3c;
+  --color-stone: #b1ada1;
+  --color-bone: #f4f3ee;
+  --color-dark: #1c1917;
+  --color-card-light: #ffffff;
+  --color-card-dark: #292524;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Smooth transitions for theme changes */
+html {
+  transition: background-color 0.7s, color 0.7s;
+}
+
+/* Light mode defaults */
+:root {
+  --bg: var(--color-bone);
+  --text: var(--color-dark);
+  --card: var(--color-card-light);
+  --border: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode overrides */
+.dark {
+  --bg: var(--color-dark);
+  --text: var(--color-bone);
+  --card: var(--color-card-dark);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #fed7aa;
+  color: #7c2d12;
+}
