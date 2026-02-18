@@ -29,8 +29,8 @@ function GraduationCapIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 const services = [
-  { icon: Microscope, title: 'Prototipagem Rápida', desc: 'Da ideia ao PoC em semanas. Validamos a viabilidade técnica antes de você gastar o budget.' },
-  { icon: Cpu, title: 'IA Generativa', desc: 'LLMs integrados a dados reais do seu negócio. Chatbots e assistentes que entendem seu contexto — não só o prompt.' },
+  { icon: Microscope, title: 'Prototipagem Rápida', desc: 'Da ideia ao PoC em semanas. Validamos a viabilidade técnica antes de você gastar seu dinheiro.' },
+  { icon: Cpu, title: 'IA Generativa', desc: 'Agentes e chatbots treinados com todo o contexto de negócio da sua empresa.' },
   { icon: Briefcase, title: 'ML para Negócios', desc: 'Previsão de demanda, churn e fraude. Modelos que pagam a própria conta com ROI claro.' },
   { icon: EyeIcon, title: 'Visão Computacional', desc: 'Automação visual para indústria e varejo. OCR otimizado para documentos brasileiros.' },
   { icon: DatabaseIcon, title: 'Engenharia de Dados', desc: 'Data Lakes organizados. Transformamos o caos de planilhas em pipelines robustos.' },
@@ -39,22 +39,22 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicos" className="space-y-12">
+    <section id="servicos" className="space-y-6 md:space-y-12">
       <div className="flex justify-between items-end border-b pb-4" style={{ borderColor: 'var(--border)' }}>
-        <h3 className="text-2xl font-bold tracking-tighter max-w-xs">Soluções Reais para Problemas Reais.</h3>
+        <h3 className="text-xl md:text-2xl font-bold tracking-tighter max-w-xs">Soluções Reais para Problemas Reais.</h3>
         <span className="text-[10px] font-mono uppercase opacity-40 hidden md:block">Architecture & Deployment</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
         {services.map((service, i) => (
           <div
             key={i}
-            className="p-8 rounded-xl border group hover:border-current transition-colors duration-300"
+            className="p-5 md:p-8 rounded-xl border group hover:border-current transition-colors duration-300"
             style={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)' }}
           >
-            <service.icon className="mb-6 opacity-80 text-[var(--color-terracotta)]" width={24} height={24} />
-            <h4 className="font-bold text-lg mb-2">{service.title}</h4>
-            <p className="text-sm opacity-60 leading-relaxed">{service.desc}</p>
+            <service.icon className="mb-3 md:mb-6 opacity-80 text-[var(--color-terracotta)]" width={24} height={24} />
+            <h4 className="font-bold text-sm md:text-lg mb-1 md:mb-2">{service.title}</h4>
+            <p className="text-xs md:text-sm opacity-60 leading-relaxed">{service.desc}</p>
           </div>
         ))}
       </div>

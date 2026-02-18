@@ -1,9 +1,9 @@
 export default function Manifesto() {
   return (
-    <section id="manifesto" className="grid grid-cols-1 md:grid-cols-2 gap-0 border rounded-3xl overflow-hidden" style={{ borderColor: 'var(--border)' }}>
-      <div className="p-10 md:p-16 flex flex-col justify-center space-y-6 bg-[var(--color-terracotta)]">
+    <section id="manifesto" className="grid grid-cols-1 md:grid-cols-2 gap-0 border rounded-xl md:rounded-3xl overflow-hidden" style={{ borderColor: 'var(--border)' }}>
+      <div className="p-6 md:p-16 flex flex-col justify-center space-y-6 bg-[var(--color-terracotta)]">
         <div className="w-12 h-1 bg-white/20 mb-4" />
-        <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tighter">
+        <h3 className="text-2xl md:text-4xl font-bold text-white tracking-tighter">
           &ldquo;Labs&rdquo; não é marketing.<br />É método.
         </h3>
         <p className="text-white/80 font-medium max-w-sm">
@@ -14,7 +14,7 @@ export default function Manifesto() {
         </div>
       </div>
 
-      <div className="p-10 md:p-16 flex flex-col justify-center space-y-8" style={{ backgroundColor: 'var(--card)' }}>
+      <div className="p-6 md:p-16 flex flex-col justify-center space-y-8" style={{ backgroundColor: 'var(--card)' }}>
         <div className="space-y-4">
           {[
             { n: '1', title: 'Transparência Radical', desc: 'Explicamos o que funciona e o que não funciona. Sem caixa preta.' },

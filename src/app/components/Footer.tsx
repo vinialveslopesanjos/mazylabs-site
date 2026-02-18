@@ -5,7 +5,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/vin%C3%ADciusanjos/';
 
 export default function Footer() {
   return (
-    <footer id="contato" className="max-w-6xl mx-auto mt-40 py-12 border-t flex flex-col md:flex-row justify-between items-start gap-8" style={{ borderColor: 'var(--border)' }}>
+    <footer id="contato" className="max-w-6xl mx-auto mt-16 md:mt-40 py-12 border-t flex flex-col md:flex-row justify-between items-start gap-8" style={{ borderColor: 'var(--border)' }}>
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <MazyLogo color="var(--text)" className="w-6 h-6 opacity-50" />
@@ -16,7 +16,7 @@ export default function Footer() {
           &copy; 2026 MazyLabs Ltda.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-12 text-[10px] uppercase tracking-widest font-bold opacity-60">
+      <div className="grid grid-cols-2 gap-8 md:gap-12 text-[10px] uppercase tracking-widest font-bold opacity-60">
         <div className="flex flex-col gap-3">
           <span className="opacity-40 mb-1">Studio</span>
           <a href="#manifesto" className="hover:text-[var(--color-terracotta)] transition-colors">Sobre</a>
