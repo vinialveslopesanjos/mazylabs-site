@@ -33,9 +33,9 @@ export default function VantaBackground() {
         scaleMobile: 1,
         color: 0xc15f3c,
         backgroundColor: 0x1c1917,
-        points: 9,
+        points: 15,
         maxDistance: 18,
-        spacing: 24,
+        spacing: 11,
         showDots: false,
       });
     };
