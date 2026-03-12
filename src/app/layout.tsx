@@ -3,14 +3,14 @@ import './globals.css';
 import VantaBackground from './components/VantaBackground';
 
 export const metadata: Metadata = {
-  title: 'MazyLabs | Engenharia de IA - São Paulo',
+  title: 'MazyLabs | Automação, Dados e Sistemas sob Medida - São Paulo',
   description:
-    'MazyLabs: engenharia de inteligência artificial sob medida. Prototipagem rápida, IA generativa, machine learning para negócios, visão computacional e engenharia de dados em São Paulo.',
+    'MazyLabs: automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor. Diagnóstico, piloto, implantação e handoff em São Paulo.',
   metadataBase: new URL('https://mazylabs.com'),
   openGraph: {
-    title: 'MazyLabs | Engenharia de IA',
+    title: 'MazyLabs | Automação, Dados e Sistemas sob Medida',
     description:
-      'Data science e machine learning de classe mundial, com pragmatismo brasileiro. Menos PowerPoint, mais GitHub.',
+      'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor. Menos promessa, mais sistema funcionando.',
     url: 'https://mazylabs.com',
     siteName: 'MazyLabs',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MazyLabs | Engenharia de IA',
+    title: 'MazyLabs | Automação, Dados e Sistemas sob Medida',
     description:
-      'Data science e machine learning de classe mundial, com pragmatismo brasileiro.',
+      'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor.',
     images: ['/og-image.png'],
   },
   robots: { index: true, follow: true },
@@ -35,7 +35,7 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'MazyLabs',
-  description: 'Engenharia de inteligência artificial sob medida. Prototipagem rápida, IA generativa, ML para negócios.',
+  description: 'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor.',
   url: 'https://mazylabs.com',
   logo: 'https://mazylabs.com/favicon.svg',
   address: {
@@ -52,11 +52,11 @@ const structuredData = {
   },
   sameAs: ['https://www.linkedin.com/in/vin%C3%ADciusanjos/'],
   serviceType: [
-    'Inteligência Artificial',
-    'Machine Learning',
-    'IA Generativa',
-    'Visão Computacional',
-    'Engenharia de Dados',
+    'Automação de Processos',
+    'Integração de Dados',
+    'Sistemas sob Medida',
+    'Análise Preditiva',
+    'Atendimento Assistido',
   ],
 };
 

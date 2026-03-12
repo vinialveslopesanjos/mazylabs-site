@@ -29,12 +29,12 @@ function GraduationCapIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 const services = [
-  { icon: Microscope, title: 'Prototipagem Rápida', desc: 'Da ideia ao PoC em semanas. Validamos a viabilidade técnica antes de você gastar seu dinheiro.' },
-  { icon: Cpu, title: 'IA Generativa', desc: 'Agentes e chatbots treinados com todo o contexto de negócio da sua empresa.' },
-  { icon: Briefcase, title: 'ML para Negócios', desc: 'Previsão de demanda, churn e fraude. Modelos que pagam a própria conta com ROI claro.' },
-  { icon: EyeIcon, title: 'Visão Computacional', desc: 'Automação visual para indústria e varejo. OCR otimizado para documentos brasileiros.' },
-  { icon: DatabaseIcon, title: 'Engenharia de Dados', desc: 'Data Lakes organizados. Transformamos o caos de planilhas em pipelines robustos.' },
-  { icon: GraduationCapIcon, title: 'Educação In-Company', desc: 'Não criamos dependência. Treinamos seu time para manter o que construímos.' },
+  { icon: Microscope, title: 'Diagnóstico e Piloto', desc: 'Em poucas semanas, tiramos uma ideia do papel e colocamos um piloto para testar valor de verdade antes de investir mais.' },
+  { icon: Cpu, title: 'Atendimento e Operação Assistida', desc: 'Criamos assistentes para atendimento, vendas e tarefas internas com contexto do seu negócio e integração com seus sistemas.' },
+  { icon: Briefcase, title: 'Previsão e Decisão', desc: 'Modelos para prever demanda, risco, churn e comportamento do cliente, com foco em decisão prática e retorno financeiro.' },
+  { icon: EyeIcon, title: 'Automação com Imagem e Documentos', desc: 'Automatizamos leitura de documentos, conferência visual e processos operacionais com fotos, PDFs e vídeos.' },
+  { icon: DatabaseIcon, title: 'Dados e Integrações', desc: 'Organizamos planilhas, sistemas e bases espalhadas para transformar informação solta em processo confiável e dado utilizável.' },
+  { icon: GraduationCapIcon, title: 'Implantação com Handoff', desc: 'Entregamos documentação, treinamento e rotina operacional para seu time continuar sem ficar preso à Mazy.' },
 ];
 
 export default function Services() {

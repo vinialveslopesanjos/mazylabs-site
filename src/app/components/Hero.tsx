@@ -15,15 +15,15 @@ export default function Hero() {
         </div>
 
         <h2 className="text-4xl md:text-7xl font-bold leading-[0.9] tracking-tighter">
-          Engenharia de IA <br />
-          <span className="opacity-40 italic font-serif">para quem constrói o futuro.</span>
+          Automação, dados e sistemas sob medida <br />
+          <span className="text-2xl md:text-5xl opacity-40 italic font-serif">para empresas que precisam operar melhor.</span>
         </h2>
 
         <p
           className="text-base md:text-xl opacity-70 leading-relaxed max-w-lg font-medium border-l-2 pl-6"
           style={{ borderColor: 'var(--color-terracotta)' }}
         >
-          IA de verdade para pequenas e médias empresas. Funciona com dados bagunçados, equipes enxutas e prazos curtos.
+          Ajudamos pequenas e médias empresas a organizar dados, automatizar tarefas do dia a dia e colocar sistemas em produção.
         </p>
 
         <div className="flex flex-wrap gap-4 pt-4">
@@ -33,7 +33,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-sm uppercase tracking-widest text-white transition-all hover:-translate-y-1 shadow-lg bg-[var(--color-terracotta)]"
           >
-            Agende uma Call
+            Entender se conseguimos ajudar
           </a>
           <a
             href="#cases"
@@ -41,7 +41,7 @@ export default function Hero() {
             style={{ borderColor: 'var(--text)' }}
           >
             <Code size={16} />
-            Ver Portfolio Técnico
+            Ver casos reais
           </a>
         </div>
       </div>
