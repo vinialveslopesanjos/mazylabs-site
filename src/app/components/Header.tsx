@@ -16,7 +16,7 @@ export default function Header() {
         <MazyLogo color="var(--color-terracotta)" className="w-10 h-10" />
         <div className="flex flex-col leading-none">
           <h1 className="text-xl font-bold tracking-tighter uppercase">MazyLabs</h1>
-          <span className="text-[9px] font-mono opacity-50 uppercase tracking-widest">Engenharia de IA</span>
+          <span className="text-[9px] font-mono opacity-50 uppercase tracking-widest">Engenharia & Automação</span>
         </div>
       </div>
       <div className="flex items-center gap-4 md:gap-6">
