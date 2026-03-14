@@ -15,7 +15,7 @@ export default function Hero() {
         </div>
 
         <h2 className="text-4xl md:text-7xl font-bold leading-[0.9] tracking-tighter">
-          Automação, dados e sistemas sob medida <br />
+          Dados, IA e sistemas sob medida <br />
           <span className="text-2xl md:text-5xl opacity-40 italic font-serif">para empresas que precisam operar melhor.</span>
         </h2>
 
