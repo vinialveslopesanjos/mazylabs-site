@@ -3,12 +3,12 @@ import './globals.css';
 import VantaBackground from './components/VantaBackground';
 
 export const metadata: Metadata = {
-  title: 'MazyLabs | Automação, Dados e Sistemas sob Medida - São Paulo',
+  title: 'MazyLabs | Dados, IA e Sistemas sob Medida - São Paulo',
   description:
     'MazyLabs: automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor. Diagnóstico, piloto, implantação e handoff em São Paulo.',
   metadataBase: new URL('https://mazylabs.com'),
   openGraph: {
-    title: 'MazyLabs | Automação, Dados e Sistemas sob Medida',
+    title: 'MazyLabs | Dados, IA e Sistemas sob Medida',
     description:
       'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor. Menos promessa, mais sistema funcionando.',
     url: 'https://mazylabs.com',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MazyLabs | Automação, Dados e Sistemas sob Medida',
+    title: 'MazyLabs | Dados, IA e Sistemas sob Medida',
     description:
       'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor.',
     images: ['/og-image.png'],
