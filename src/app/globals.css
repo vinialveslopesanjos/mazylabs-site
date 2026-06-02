@@ -23,7 +23,6 @@ html {
   --text: var(--color-dark);
   --card: var(--color-card-light);
   --border: rgba(0, 0, 0, 0.05);
-  --vanta-overlay: rgba(244, 243, 238, 0.82);
 }
 
 /* Dark mode overrides */
@@ -32,11 +31,10 @@ html {
   --text: var(--color-bone);
   --card: var(--color-card-dark);
   --border: rgba(255, 255, 255, 0.1);
-  --vanta-overlay: rgba(28, 25, 23, 0.48);
 }
 
 body {
-  background-color: transparent;
+  background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

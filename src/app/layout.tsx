@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import VantaBackground from './components/VantaBackground';
 
 export const metadata: Metadata = {
   title: 'MazyLabs | Dados, IA e Sistemas sob Medida - São Paulo',
@@ -81,9 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen relative">
-        <VantaBackground />
-        <div className="pointer-events-none fixed inset-0 z-[1] bg-[var(--vanta-overlay)] backdrop-blur-[1.5px]" />
-        <div className="relative z-10">{children}</div>
+        {children}
       </body>
     </html>
   );
