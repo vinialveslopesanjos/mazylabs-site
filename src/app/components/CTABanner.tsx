@@ -18,7 +18,7 @@ export default function CTABanner() {
         rel="noopener noreferrer"
         className="px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest bg-white text-[var(--color-dark)] transition-all hover:-translate-y-1 shadow-lg shrink-0"
       >
-        Agende uma Call
+        Conversar sobre um projeto
       </a>
     </section>
   );

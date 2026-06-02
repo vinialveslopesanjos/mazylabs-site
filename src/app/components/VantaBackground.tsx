@@ -27,16 +27,16 @@ export default function VantaBackground() {
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
-        minHeight: 200,
+        minHeight: 400,
         minWidth: 200,
-        scale: 1,
+        scale: 0.5,
         scaleMobile: 1,
         color: 0xc15f3c,
         backgroundColor: 0x1c1917,
-        points: 15,
-        maxDistance: 18,
-        spacing: 11,
-        showDots: false,
+        points: 13,
+        maxDistance: 20,
+        spacing: 20,
+        showDots: true,
       });
     };
 

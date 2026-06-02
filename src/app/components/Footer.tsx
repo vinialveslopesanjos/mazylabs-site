@@ -16,11 +16,17 @@ export default function Footer() {
           &copy; 2026 MazyLabs Ltda.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-8 md:gap-12 text-[10px] uppercase tracking-widest font-bold opacity-60">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12 text-[10px] uppercase tracking-widest font-bold opacity-60">
         <div className="flex flex-col gap-3">
           <span className="opacity-40 mb-1">Studio</span>
-          <a href="#manifesto" className="hover:text-[var(--color-terracotta)] transition-colors">Sobre</a>
-          <a href="#servicos" className="hover:text-[var(--color-terracotta)] transition-colors">Serviços</a>
+          <a href="/#manifesto" className="hover:text-[var(--color-terracotta)] transition-colors">Sobre</a>
+          <a href="/#servicos" className="hover:text-[var(--color-terracotta)] transition-colors">Serviços</a>
+        </div>
+        <div className="flex flex-col gap-3">
+          <span className="opacity-40 mb-1">Legal</span>
+          <a href="/politica-de-privacidade" className="hover:text-[var(--color-terracotta)] transition-colors">Privacidade</a>
+          <a href="/termos-de-servico" className="hover:text-[var(--color-terracotta)] transition-colors">Termos</a>
+          <a href="/exclusao-de-dados" className="hover:text-[var(--color-terracotta)] transition-colors">Dados</a>
         </div>
         <div className="flex flex-col gap-3">
           <span className="opacity-40 mb-1">Contato</span>

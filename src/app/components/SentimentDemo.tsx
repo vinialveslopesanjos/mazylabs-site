@@ -79,11 +79,11 @@ export default function SentimentDemo() {
     <section className="space-y-5 md:space-y-8">
       <div className="flex flex-col items-center text-center space-y-2 md:space-y-4">
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-40">
-          Prova Técnica Interativa
+          Exemplo Prático
         </span>
         <h3 className="text-2xl md:text-3xl font-bold">Classificação de Sentimentos</h3>
         <p className="text-sm opacity-60 max-w-md">
-          Digite um feedback de cliente e veja a categorização em tempo real.
+          Veja como classificamos feedbacks de clientes para priorizar atendimento, produto e retenção.
         </p>
       </div>
 
@@ -93,7 +93,7 @@ export default function SentimentDemo() {
           {/* Header */}
           <div className="flex items-center gap-3 border-b border-white/10 pb-4">
             <MazyLogo color="#c15f3c" className="w-6 h-6" />
-            <span className="text-white font-mono text-xs">MazySentiment · Gemini 2.0 Flash</span>
+            <span className="text-white font-mono text-xs">MazySentiment · Análise de Feedback</span>
           </div>
 
           {/* Examples */}
@@ -164,7 +164,7 @@ export default function SentimentDemo() {
 
           {/* Disclaimer */}
           <p className="text-[9px] font-mono text-gray-600 text-center mt-2">
-            Demo simplificada. Em produção, usamos LLMs fine-tuned para contexto específico do cliente.
+            Exemplo funcional. Em produção, o modelo é ajustado ao vocabulário e contexto de cada cliente.
           </p>
         </div>
       </div>

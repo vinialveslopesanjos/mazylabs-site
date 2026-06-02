@@ -19,7 +19,7 @@ export default function Manifesto() {
           {[
             { n: '1', title: 'Transparência Radical', desc: 'Explicamos o que funciona e o que não funciona. Sem caixa preta.' },
             { n: '2', title: 'Preço Justo & Real', desc: 'Soluções dimensionadas para a realidade do PME brasileiro.' },
-            { n: '3', title: 'Código Aberto', desc: 'Contribuímos com a comunidade. Confiança se constrói publicamente.' },
+            { n: '3', title: 'Cliente Autônomo', desc: 'Entregamos projeto com começo, meio e fim. Seu time opera sozinho depois.' },
           ].map((item) => (
             <div key={item.n} className="flex items-start gap-4">
               <div className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-1 bg-[var(--color-stone)]">

@@ -8,7 +8,7 @@ const smallCases = [
     title: 'Modelo Preditivo de Churn',
     subtitle: 'Teste A/B validado em produção',
     description:
-      'Modelo preditivo que identificava clientes com maior probabilidade de resgatar ou não reinvestir, permitindo ações direcionadas antes do vencimento.',
+      'Modelo que antecipava quais clientes iam resgatar ou parar de investir, permitindo ações de retenção antes do vencimento.',
     metrics: [
       { value: '2x', label: 'reinvestimento' },
       { value: '13x', label: 'captação' },
@@ -20,9 +20,9 @@ const smallCases = [
     logo: '/logos/nubank-logo.svg',
     period: '2023',
     title: 'Concessão de Crédito',
-    subtitle: 'Análise estatística com +1M clientes',
+    subtitle: 'Validação de modelo de crédito em escala',
     description:
-      'Análise estatística e testes A/B com população superior a 1 milhão de clientes para avaliar a viabilidade do modelo de concessão de crédito.',
+      'Testes A/B e análise estatística em larga escala para validar o modelo de concessão de crédito e medir impacto financeiro real antes do rollout.',
     metrics: [{ value: 'R$ 8M', label: 'impacto estimado' }],
   },
   {
@@ -32,7 +32,7 @@ const smallCases = [
     title: 'Inteligência Financeira',
     subtitle: 'Otimização de custos e risco',
     description:
-      'Ferramentas analíticas para otimização de custos fixos e variáveis, com suporte à gestão de exposição ao risco de crédito corporativo.',
+      'Ferramentas para reduzir custos operacionais e controlar exposição ao risco de crédito, com dashboards práticos para tomada de decisão.',
     metrics: [],
   },
 ];
@@ -76,10 +76,10 @@ export default function CaseStudies() {
               className="text-[10px] font-bold uppercase tracking-widest"
               style={{ color: 'var(--color-terracotta)' }}
             >
-              Graph Analytics + IA Generativa
+              Identificação de risco em rede de transações
             </p>
             <p className="text-sm leading-relaxed opacity-70 max-w-md">
-              Rede relacional onde nós representam pessoas físicas e jurídicas e arestas representam transações em contexto de risco financeiro. IA interpreta o grafo para gerar resumos executivos e identificar entidades críticas via linguagem natural.
+              Plataforma que mapeia relações entre pessoas e empresas em transações financeiras para identificar riscos ocultos. Gera resumos executivos automáticos e destaca entidades críticas em linguagem acessível para o time de compliance.
             </p>
           </div>
 
