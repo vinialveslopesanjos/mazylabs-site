@@ -1,0 +1,31 @@
+{
+  "event": "message_created",
+  "id": 9001,
+  "content": "Oi, tenho uma empresa e queria automatizar uns relatorios manuais. Voces fazem isso?",
+  "message_type": "incoming",
+  "private": false,
+  "sender": {
+    "id": 101,
+    "name": "Joao Silva",
+    "phone_number": "+55 11 99999-9999",
+    "type": "contact"
+  },
+  "conversation": {
+    "id": 7001,
+    "account_id": 1,
+    "inbox_id": 2,
+    "status": "open",
+    "labels": [],
+    "assignee_id": null,
+    "team_id": null,
+    "contact": {
+      "id": 101,
+      "name": "Joao Silva",
+      "phone_number": "+55 11 99999-9999",
+      "type": "contact"
+    }
+  },
+  "account": {
+    "id": 1
+  }
+}

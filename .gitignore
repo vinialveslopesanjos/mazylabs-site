@@ -30,6 +30,14 @@ yarn-error.log*
 
 # env files
 .env*.local
+.env
+agent/.env
+agent/.env.*
+!agent/.env.example
+
+# agent backend
+agent/node_modules/
+agent/dist/
 
 # vercel
 .vercel
