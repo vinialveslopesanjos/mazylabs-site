@@ -2,26 +2,24 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'MazyLabs | Dados, IA e Sistemas sob Medida - São Paulo',
+  title: 'MazyLabs | Dados, IA e Automação em Campinas',
   description:
-    'MazyLabs: automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor. Diagnóstico, piloto, implantação e handoff em São Paulo.',
+    'Empresa de dados, inteligência artificial, automação e sistemas sob medida em Campinas. Diagnóstico, piloto, implantação e transferência de conhecimento.',
   metadataBase: new URL('https://mazylabs.com'),
   openGraph: {
-    title: 'MazyLabs | Dados, IA e Sistemas sob Medida',
+    title: 'MazyLabs | Dados, IA e Automação em Campinas',
     description:
-      'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor. Menos promessa, mais sistema funcionando.',
+      'Dados, inteligência artificial, automação e sistemas sob medida para empresas de Campinas e região. Menos promessa, mais sistema funcionando.',
     url: 'https://mazylabs.com',
     siteName: 'MazyLabs',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     locale: 'pt_BR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MazyLabs | Dados, IA e Sistemas sob Medida',
+    title: 'MazyLabs | Dados, IA e Automação em Campinas',
     description:
-      'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor.',
-    images: ['/og-image.png'],
+      'Dados, inteligência artificial, automação e sistemas sob medida para empresas de Campinas e região.',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://mazylabs.com' },
@@ -34,15 +32,19 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'MazyLabs',
-  description: 'Automações, integrações e soluções de dados sob medida para empresas que precisam operar melhor.',
+  description: 'Empresa de dados, inteligência artificial, automação e sistemas sob medida para empresas de Campinas e região.',
   url: 'https://mazylabs.com',
   logo: 'https://mazylabs.com/favicon.svg',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'São Paulo',
+    addressLocality: 'Campinas',
     addressRegion: 'SP',
     addressCountry: 'BR',
   },
+  areaServed: [
+    { '@type': 'City', name: 'Campinas' },
+    { '@type': 'AdministrativeArea', name: 'Região Metropolitana de Campinas' },
+  ],
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+55-11-97981-0832',
@@ -56,7 +58,11 @@ const structuredData = {
     'Sistemas sob Medida',
     'Análise Preditiva',
     'Atendimento Assistido',
+    'Inteligência Artificial para Empresas',
+    'Agentes de IA',
+    'Dashboards e Pipelines de Dados',
   ],
+  knowsAbout: ['Dados', 'Inteligência Artificial', 'Automação', 'Integração de APIs', 'Sistemas sob medida'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

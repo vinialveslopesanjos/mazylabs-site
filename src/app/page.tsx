@@ -10,6 +10,7 @@ import VisualIdentity from './components/VisualIdentity';
 import CTABanner from './components/CTABanner';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
+import LocalPresence from './components/LocalPresence';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <ClientLogos />
         <Services />
+        <LocalPresence />
         <CaseStudies />
         <NetworkGraph />
         <SentimentDemo />
