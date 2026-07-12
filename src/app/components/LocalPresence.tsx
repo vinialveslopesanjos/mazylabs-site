@@ -16,6 +16,11 @@ export default function LocalPresence() {
         <p className="text-base md:text-lg leading-relaxed opacity-70 max-w-3xl">
           A MazyLabs atende empresas de Campinas e da região metropolitana com diagnóstico, piloto e implantação. Construímos integrações, pipelines de dados, dashboards, agentes de IA, automações de processos e sistemas sob medida — com acompanhamento próximo e transferência de conhecimento.
         </p>
+        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
+          <a href="/servicos/automacao-ia-campinas" className="hover:text-[var(--color-terracotta)] transition-colors">Automação e IA</a>
+          <a href="/servicos/dados-bi-campinas" className="hover:text-[var(--color-terracotta)] transition-colors">Dados e BI</a>
+          <a href="/servicos/sistemas-sob-medida-campinas" className="hover:text-[var(--color-terracotta)] transition-colors">Sistemas sob medida</a>
+        </div>
         <a href="/campinas" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-[var(--color-terracotta)] transition-colors">
           Conheça nossa atuação em Campinas
           <ArrowUpRight size={16} aria-hidden="true" />
