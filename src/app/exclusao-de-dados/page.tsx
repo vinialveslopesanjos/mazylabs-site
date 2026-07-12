@@ -4,7 +4,7 @@ import LegalPage from '../components/legal/LegalPage';
 export const metadata: Metadata = {
   title: 'Exclusao de Dados | MazyLabs',
   description: 'Instrucoes para solicitar exclusao de dados pessoais tratados pela MazyLabs, incluindo dados recebidos por WhatsApp.',
-  alternates: { canonical: 'https://mazylabs.com/exclusao-de-dados' },
+  alternates: { canonical: 'https://www.mazylabs.com/exclusao-de-dados' },
 };
 
 const sections = [

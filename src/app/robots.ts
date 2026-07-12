@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://mazylabs.com/sitemap.xml',
-    host: 'https://mazylabs.com',
+    sitemap: 'https://www.mazylabs.com/sitemap.xml',
+    host: 'https://www.mazylabs.com',
   };
 }
