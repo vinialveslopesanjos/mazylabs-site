@@ -12,7 +12,7 @@ export default function Footer() {
           <span className="font-bold uppercase tracking-widest text-xs">MazyLabs</span>
         </div>
         <p className="text-[10px] opacity-40 max-w-xs">
-          Feito com código limpo e café forte em São Paulo.<br />
+          Feito com código limpo e café forte em Campinas.<br />
           &copy; 2026 MazyLabs Ltda.
         </p>
       </div>

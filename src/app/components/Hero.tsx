@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-current/10 bg-white/5">
           <Terminal size={12} className="text-[var(--color-terracotta)]" />
           <span className="text-[10px] font-mono font-bold uppercase tracking-widest opacity-60">
-            v2.0 // São Paulo Headquartered
+            Campinas // São Paulo
           </span>
         </div>
 
@@ -23,7 +23,7 @@ export default function Hero() {
           className="text-base md:text-xl opacity-70 leading-relaxed max-w-lg font-medium border-l-2 pl-6"
           style={{ borderColor: 'var(--color-terracotta)' }}
         >
-          Ajudamos pequenas e médias empresas a organizar dados, automatizar tarefas do dia a dia e colocar sistemas em produção.
+          Ajudamos pequenas e médias empresas de Campinas e região a organizar dados, automatizar tarefas do dia a dia e colocar sistemas em produção.
         </p>
 
         <div className="flex flex-wrap gap-4 pt-4">
