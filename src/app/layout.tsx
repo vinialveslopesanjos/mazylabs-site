@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'MazyLabs | Dados, IA e Automação em Campinas',
   description:
     'Empresa de dados, inteligência artificial, automação e sistemas sob medida em Campinas. Diagnóstico, piloto, implantação e transferência de conhecimento.',
-  metadataBase: new URL('https://mazylabs.com'),
+  metadataBase: new URL('https://www.mazylabs.com'),
   openGraph: {
     title: 'MazyLabs | Dados, IA e Automação em Campinas',
     description:
       'Dados, inteligência artificial, automação e sistemas sob medida para empresas de Campinas e região. Menos promessa, mais sistema funcionando.',
-    url: 'https://mazylabs.com',
+    url: 'https://www.mazylabs.com',
     siteName: 'MazyLabs',
     locale: 'pt_BR',
     type: 'website',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Dados, inteligência artificial, automação e sistemas sob medida para empresas de Campinas e região.',
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://mazylabs.com' },
+  alternates: { canonical: 'https://www.mazylabs.com' },
   icons: {
     icon: '/favicon.svg',
   },
@@ -33,8 +33,8 @@ const structuredData = {
   '@type': 'ProfessionalService',
   name: 'MazyLabs',
   description: 'Empresa de dados, inteligência artificial, automação e sistemas sob medida para empresas de Campinas e região.',
-  url: 'https://mazylabs.com',
-  logo: 'https://mazylabs.com/favicon.svg',
+  url: 'https://www.mazylabs.com',
+  logo: 'https://www.mazylabs.com/favicon.svg',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Campinas',

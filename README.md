@@ -1,6 +1,6 @@
 # MazyLabs Site
 
-Site institucional da [MazyLabs](https://mazylabs.com) — estúdio de engenharia de IA em São Paulo.
+Site institucional da [MazyLabs](https://www.mazylabs.com) — empresa de dados, IA, automação e sistemas sob medida em Campinas.
 
 ## Stack
 
