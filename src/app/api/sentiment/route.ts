@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'HTTP-Referer': 'https://mazylabs.com',
+      'HTTP-Referer': 'https://www.mazylabs.com',
       'X-Title': 'MazySentiment',
     },
     body: JSON.stringify({

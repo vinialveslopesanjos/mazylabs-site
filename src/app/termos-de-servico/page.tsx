@@ -4,7 +4,7 @@ import LegalPage from '../components/legal/LegalPage';
 export const metadata: Metadata = {
   title: 'Termos de Servico | MazyLabs',
   description: 'Condicoes gerais de uso dos canais digitais, atendimento e servicos prestados pela MazyLabs.',
-  alternates: { canonical: 'https://mazylabs.com/termos-de-servico' },
+  alternates: { canonical: 'https://www.mazylabs.com/termos-de-servico' },
 };
 
 const sections = [

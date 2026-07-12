@@ -8,7 +8,7 @@ const WHATSAPP_URL = 'https://wa.me/5511979810832?text=Ol%C3%A1%21%20Procuro%20u
 export const metadata: Metadata = {
   title: 'Empresa de Dados, IA e Automação em Campinas | MazyLabs',
   description: 'Soluções de dados, inteligência artificial, automação, integrações e sistemas sob medida para empresas de Campinas e região. Converse com a MazyLabs.',
-  alternates: { canonical: 'https://mazylabs.com/campinas' },
+  alternates: { canonical: 'https://www.mazylabs.com/campinas' },
 };
 
 const services = [

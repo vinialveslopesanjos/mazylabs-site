@@ -4,7 +4,7 @@ import LegalPage from '../components/legal/LegalPage';
 export const metadata: Metadata = {
   title: 'Politica de Privacidade | MazyLabs',
   description: 'Como a MazyLabs coleta, usa, armazena e protege dados pessoais em seus canais digitais e atendimento via WhatsApp.',
-  alternates: { canonical: 'https://mazylabs.com/politica-de-privacidade' },
+  alternates: { canonical: 'https://www.mazylabs.com/politica-de-privacidade' },
 };
 
 const sections = [
