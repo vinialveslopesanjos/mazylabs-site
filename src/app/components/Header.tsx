@@ -1,36 +1,54 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import MazyLogo from './MazyLogo';
 import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const close = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', close);
+    return () => document.removeEventListener('keydown', close);
+  }, [open]);
 
   return (
     <header
-      className="max-w-6xl mx-auto mb-10 md:mb-20 flex flex-wrap justify-between items-center border-b pb-6"
+      className="max-w-6xl mx-auto mb-10 md:mb-14 flex flex-wrap justify-between items-center border-b pb-6"
       style={{ borderColor: 'var(--border)' }}
     >
       <a href="/" className="flex items-center gap-4">
         <MazyLogo color="var(--color-terracotta)" className="w-10 h-10" />
         <div className="flex flex-col leading-none">
-          <h1 className="text-xl font-bold tracking-tighter uppercase">MazyLabs</h1>
-          <span className="text-[9px] font-mono opacity-50 uppercase tracking-widest">Engenharia & Automação</span>
+          <span className="text-xl font-bold tracking-tighter uppercase">MazyLabs</span>
+          <span className="text-[9px] font-sans opacity-50 uppercase tracking-widest">Engenharia & Automação</span>
         </div>
       </a>
       <div className="flex items-center gap-4 md:gap-6">
-        <nav className="hidden md:flex gap-6 text-xs font-bold uppercase tracking-widest opacity-60">
+        <nav aria-label="Navegação principal" className="hidden md:flex gap-6 text-sm font-semibold opacity-75">
+          <a href="/#cases" className="hover:text-[var(--color-terracotta)] transition-colors">Projetos</a>
           <a href="/#manifesto" className="hover:text-[var(--color-terracotta)] transition-colors">Manifesto</a>
           <a href="/#servicos" className="hover:text-[var(--color-terracotta)] transition-colors">Serviços</a>
           <a href="/#contato" className="hover:text-[var(--color-terracotta)] transition-colors">Contato</a>
         </nav>
         <ThemeToggle />
         <button
+          ref={menuButton}
+          type="button"
           onClick={() => setOpen(!open)}
-          className="md:hidden w-8 h-8 flex items-center justify-center rounded-md border opacity-60 hover:opacity-100 transition-opacity"
+          className="md:hidden w-11 h-11 flex items-center justify-center rounded-md border opacity-60 hover:opacity-100 transition-opacity"
           style={{ borderColor: 'var(--border)' }}
-          aria-label="Menu"
+          aria-label={open ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
             {open ? (
@@ -51,7 +69,8 @@ export default function Header() {
 
       {/* Mobile nav dropdown */}
       {open && (
-        <nav className="w-full mt-4 pt-4 border-t md:hidden flex flex-col gap-3 text-xs font-bold uppercase tracking-widest opacity-60" style={{ borderColor: 'var(--border)' }}>
+        <nav id="mobile-navigation" aria-label="Navegação móvel" className="w-full mt-4 pt-4 border-t md:hidden flex flex-col gap-3 text-xs font-bold uppercase tracking-widest opacity-60" style={{ borderColor: 'var(--border)' }}>
+          <a href="/#cases" onClick={() => setOpen(false)} className="hover:text-[var(--color-terracotta)] transition-colors py-1">Projetos</a>
           <a href="/#manifesto" onClick={() => setOpen(false)} className="hover:text-[var(--color-terracotta)] transition-colors py-1">Manifesto</a>
           <a href="/#servicos" onClick={() => setOpen(false)} className="hover:text-[var(--color-terracotta)] transition-colors py-1">Serviços</a>
           <a href="/#contato" onClick={() => setOpen(false)} className="hover:text-[var(--color-terracotta)] transition-colors py-1">Contato</a>

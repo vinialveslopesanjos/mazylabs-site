@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FloatingCTA from '../components/FloatingCTA';
 
-const WHATSAPP_URL = 'https://wa.me/5511979810832?text=Ol%C3%A1%21%20Procuro%20uma%20empresa%20de%20dados%2C%20IA%20ou%20automa%C3%A7%C3%A3o%20em%20Campinas.';
+const WHATSAPP_URL = 'https://wa.me/5511945410931?text=Ol%C3%A1%21%20Procuro%20uma%20empresa%20de%20dados%2C%20IA%20ou%20automa%C3%A7%C3%A3o%20em%20Campinas.';
 
 export const metadata: Metadata = {
   title: 'Empresa de Dados, IA e Automação em Campinas | MazyLabs',
@@ -41,7 +41,7 @@ export default function CampinasPage() {
       <main className="max-w-6xl mx-auto">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
         <section className="max-w-4xl py-8 md:py-20 space-y-8">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-terracotta)]">Tecnologia em Campinas, SP</p>
+          <p className="font-sans text-xs uppercase tracking-[0.2em] text-[var(--color-terracotta)]">Tecnologia em Campinas, SP</p>
           <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-[0.95]">Dados, IA e automação para empresas de Campinas.</h1>
           <p className="text-lg md:text-2xl leading-relaxed opacity-70 max-w-3xl">A MazyLabs transforma processos manuais e dados dispersos em sistemas que funcionam no dia a dia. Atuamos com diagnóstico, piloto, implantação e transferência de conhecimento.</p>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex px-7 py-4 rounded-lg bg-[var(--color-terracotta)] text-white font-bold text-sm uppercase tracking-widest hover:-translate-y-1 transition-transform shadow-lg">Falar sobre meu desafio</a>
@@ -52,7 +52,7 @@ export default function CampinasPage() {
           <div className="grid md:grid-cols-2 gap-4">
             {services.map(([title, description], index) => (
               <article key={title} className="rounded-2xl p-6 md:p-8 bg-[var(--card)] border" style={{ borderColor: 'var(--border)' }}>
-                <span className="font-mono text-xs opacity-40">0{index + 1}</span>
+                <span className="font-sans text-xs opacity-40">0{index + 1}</span>
                 <h3 className="text-xl md:text-2xl font-bold mt-5 mb-3">{title}</h3>
                 <p className="leading-relaxed opacity-65">{description}</p>
               </article>

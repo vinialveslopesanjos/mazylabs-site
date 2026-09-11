@@ -52,7 +52,7 @@ const sections = [
   {
     title: '7. Contato',
     body: [
-      'Para duvidas sobre estes termos, solicitacoes comerciais ou suporte, entre em contato pelo email vinicius.anjos@mazylabs.com.',
+      'Para duvidas sobre estes termos, solicitacoes comerciais ou suporte, entre em contato pelo WhatsApp +55 11 94541-0931.',
     ],
   },
 ];

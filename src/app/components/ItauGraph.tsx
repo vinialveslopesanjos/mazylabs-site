@@ -150,7 +150,7 @@ export default function ItauGraph() {
 
   if (!mounted) {
     return <div className="w-full h-[300px] rounded-lg bg-black/20 flex items-center justify-center">
-      <span className="text-[10px] font-mono text-gray-500">Carregando grafo...</span>
+      <span className="text-[10px] font-sans text-gray-500">Carregando grafo...</span>
     </div>;
   }
 

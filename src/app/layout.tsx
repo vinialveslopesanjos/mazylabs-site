@@ -1,5 +1,14 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import './globals.css';
+
+const inter = localFont({
+  src: './fonts/inter-latin.woff2',
+  variable: '--font-inter',
+  weight: '400 700',
+  style: 'normal',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'MazyLabs | Dados, IA e Automação em Campinas',
@@ -47,11 +56,10 @@ const structuredData = {
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+55-11-97981-0832',
+    telephone: '+55-11-94541-0931',
     contactType: 'sales',
     availableLanguage: ['Portuguese', 'English'],
   },
-  sameAs: ['https://www.linkedin.com/in/vin%C3%ADciusanjos/'],
   serviceType: [
     'Automação de Processos',
     'Integração de Dados',
@@ -78,14 +86,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className="min-h-screen relative">
+      <body className={`${inter.variable} min-h-screen relative`}>
         {children}
       </body>
     </html>

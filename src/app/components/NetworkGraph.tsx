@@ -49,7 +49,7 @@ export default function NetworkGraph() {
           label: 'sua empresa',
           image: empresaIcon(isDark),
           shape: 'image' as const, size: 20, borderWidth: 0,
-          font: { size: 16, color: '#c15f3c', face: 'ui-monospace, monospace', bold: true, vadjust: 2 },
+          font: { size: 16, color: '#c15f3c', face: 'Inter, system-ui, sans-serif', bold: true, vadjust: 2 },
         },
       ]);
 
@@ -147,7 +147,7 @@ export default function NetworkGraph() {
           <h3 className="text-2xl md:text-3xl font-bold">Rede de Projetos</h3>
         </div>
         <div className="max-w-3xl mx-auto h-[280px] md:h-[360px] rounded-xl border flex items-center justify-center" style={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)' }}>
-          <span className="text-sm opacity-40 font-mono">Carregando...</span>
+          <span className="text-sm opacity-40 font-sans">Carregando...</span>
         </div>
       </section>
     );

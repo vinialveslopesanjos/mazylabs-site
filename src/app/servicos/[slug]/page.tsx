@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import FloatingCTA from '../../components/FloatingCTA';
 
-const WHATSAPP_URL = 'https://wa.me/5511979810832?text=Ol%C3%A1%21%20Encontrei%20a%20MazyLabs%20pesquisando%20solu%C3%A7%C3%B5es%20de%20tecnologia%20em%20Campinas.';
+const WHATSAPP_URL = 'https://wa.me/5511945410931?text=Ol%C3%A1%21%20Encontrei%20a%20MazyLabs%20pesquisando%20solu%C3%A7%C3%B5es%20de%20tecnologia%20em%20Campinas.';
 
 const pages = {
   'automacao-ia-campinas': {
@@ -78,12 +78,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <Header />
       <main className="max-w-6xl mx-auto">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
-        <nav aria-label="Navegação estrutural" className="text-xs font-mono uppercase tracking-widest opacity-50 py-4">
+        <nav aria-label="Navegação estrutural" className="text-xs font-sans uppercase tracking-widest opacity-50 py-4">
           <a href="/" className="hover:text-[var(--color-terracotta)]">Início</a> / <a href="/campinas" className="hover:text-[var(--color-terracotta)]">Campinas</a> / Serviço
         </nav>
 
         <section className="max-w-5xl py-10 md:py-20 space-y-8">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-terracotta)]">{page.eyebrow}</p>
+          <p className="font-sans text-xs uppercase tracking-[0.2em] text-[var(--color-terracotta)]">{page.eyebrow}</p>
           <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-[0.95]">{page.title}</h1>
           <p className="text-lg md:text-2xl leading-relaxed opacity-70 max-w-3xl">{page.description}</p>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex px-7 py-4 rounded-lg bg-[var(--color-terracotta)] text-white font-bold text-sm uppercase tracking-widest hover:-translate-y-1 transition-transform shadow-lg">Conversar com um especialista</a>
@@ -99,7 +99,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="grid md:grid-cols-2 gap-4">
             {page.outcomes.map((outcome, index) => (
               <div key={outcome} className="p-6 md:p-8 rounded-2xl bg-[var(--card)] border" style={{ borderColor: 'var(--border)' }}>
-                <span className="font-mono text-xs text-[var(--color-terracotta)]">0{index + 1}</span>
+                <span className="font-sans text-xs text-[var(--color-terracotta)]">0{index + 1}</span>
                 <h3 className="text-xl font-bold mt-5">{outcome}</h3>
               </div>
             ))}

@@ -11,7 +11,7 @@ const sections = [
   {
     title: '1. Como solicitar exclusao',
     body: [
-      'Para solicitar a exclusao de dados pessoais tratados pela MazyLabs, envie um email para vinicius.anjos@mazylabs.com com o assunto "Exclusao de dados".',
+      'Para solicitar a exclusao de dados pessoais tratados pela MazyLabs, envie uma mensagem pelo WhatsApp +55 11 94541-0931 informando "Exclusao de dados".',
       'No pedido, informe seu nome, o canal usado para falar conosco e, se o contato foi feito pelo WhatsApp, o numero de telefone utilizado na conversa. Essas informacoes ajudam a localizar os registros corretos.',
     ],
   },
@@ -25,7 +25,7 @@ const sections = [
   {
     title: '3. Prazo de atendimento',
     body: [
-      'Responderemos as solicitacoes em prazo razoavel e, quando aplicavel, em ate 30 dias. Se precisarmos de informacoes adicionais para confirmar identidade ou localizar dados, entraremos em contato pelo email informado.',
+      'Responderemos as solicitacoes em prazo razoavel e, quando aplicavel, em ate 30 dias. Se precisarmos de informacoes adicionais para confirmar identidade ou localizar dados, entraremos em contato pelo canal utilizado na solicitacao.',
     ],
   },
   {

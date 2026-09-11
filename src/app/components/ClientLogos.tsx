@@ -13,8 +13,8 @@ export default function ClientLogos() {
     <section className="overflow-hidden py-8 border-y" style={{ borderColor: 'var(--border)' }}>
       <div className="flex items-center gap-4 mb-6 px-4 max-w-6xl mx-auto">
         <div className="w-8 h-px bg-[var(--color-terracotta)]" />
-        <span className="text-[10px] font-mono font-bold uppercase tracking-widest opacity-40">
-          Empresas que confiaram
+        <span className="text-xs font-sans font-semibold uppercase tracking-widest opacity-65">
+          Experiência profissional em grandes empresas
         </span>
       </div>
       <div className="relative">
@@ -29,6 +29,7 @@ export default function ClientLogos() {
           ))}
         </div>
       </div>
+      <p className="px-4 pt-6 max-w-6xl mx-auto text-sm opacity-65 leading-relaxed">As marcas representam experiência profissional. Não são clientes da MazyLabs.</p>
     </section>
   );
 }

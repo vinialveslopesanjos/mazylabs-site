@@ -22,7 +22,7 @@ export default function LegalPage({ label, title, description, updatedAt, sectio
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-current/10 bg-white/5">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-widest opacity-60">
+              <span className="text-[10px] font-sans font-bold uppercase tracking-widest opacity-60">
                 {label}
               </span>
             </div>
@@ -37,7 +37,7 @@ export default function LegalPage({ label, title, description, updatedAt, sectio
                 {description}
               </p>
             </div>
-            <p className="text-[10px] font-mono uppercase tracking-widest opacity-50">
+            <p className="text-[10px] font-sans uppercase tracking-widest opacity-50">
               Atualizado em {updatedAt}
             </p>
           </div>

@@ -12,7 +12,7 @@ const sections = [
     title: '1. Quem somos',
     body: [
       'A MazyLabs desenvolve automacoes, integracoes, solucoes de dados e sistemas sob medida para empresas. Esta Politica de Privacidade explica como tratamos dados pessoais quando uma pessoa acessa nosso site, entra em contato conosco ou conversa com nossos canais digitais, incluindo WhatsApp.',
-      'Para duvidas sobre privacidade, fale com a MazyLabs pelo email vinicius.anjos@mazylabs.com.',
+      'Para duvidas sobre privacidade, fale com a MazyLabs pelo WhatsApp +55 11 94541-0931.',
     ],
   },
   {
@@ -46,7 +46,7 @@ const sections = [
   {
     title: '6. Direitos do titular',
     body: [
-      'Voce pode solicitar acesso, correcao, atualizacao, portabilidade, anonimizacao, oposicao ao tratamento ou exclusao de seus dados pessoais, conforme a legislacao aplicavel. Para exercer seus direitos, envie uma solicitacao para vinicius.anjos@mazylabs.com.',
+      'Voce pode solicitar acesso, correcao, atualizacao, portabilidade, anonimizacao, oposicao ao tratamento ou exclusao de seus dados pessoais, conforme a legislacao aplicavel. Para exercer seus direitos, envie uma solicitacao pelo WhatsApp +55 11 94541-0931.',
       'Para pedidos relacionados a conversas pelo WhatsApp, inclua o numero de telefone usado no contato para que possamos localizar os registros relevantes.',
     ],
   },

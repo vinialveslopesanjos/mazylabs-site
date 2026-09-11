@@ -17,19 +17,6 @@ interface Result {
   loading: boolean;
 }
 
-const categoryColors: Record<Category, string> = {
-  alegria: '#22c55e',
-  gratidão: '#4ade80',
-  confiança: '#06b6d4',
-  entusiasmo: '#f59e0b',
-  amor: '#ec4899',
-  dúvida: '#eab308',
-  frustração: '#f97316',
-  raiva: '#ef4444',
-  tristeza: '#6366f1',
-  'crítica construtiva': '#8b5cf6',
-  ceticismo: '#94a3b8',
-};
 
 // Gemini 2.0 Flash — Google AI Studio (gratuito, 1500 req/dia)
 // API key restrita ao domínio mazylabs.com no Google Cloud Console
@@ -62,111 +49,73 @@ export default function SentimentDemo() {
   const [error, setError] = useState<string | null>(null);
 
   const analyze = async (text: string) => {
-    if (text.trim().length < 3) return;
+    if (result?.loading || text.trim().length < 3) return;
     setError(null);
     setResult({ category: 'dúvida', loading: true });
 
     try {
       const category = await analyzeWithGemini(text);
       setResult({ category, loading: false });
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erro inesperado');
-      setResult({ category: 'dúvida', loading: false });
+    } catch {
+      setError('A demonstração está indisponível neste ambiente. Tente novamente mais tarde.');
+      setResult(null);
     }
   };
 
   return (
-    <section className="space-y-5 md:space-y-8">
-      <div className="flex flex-col items-center text-center space-y-2 md:space-y-4">
-        <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-40">
-          Exemplo Prático
-        </span>
-        <h3 className="text-2xl md:text-3xl font-bold">Classificação de Sentimentos</h3>
-        <p className="text-sm opacity-60 max-w-md">
+    <section className="sentiment-section" aria-labelledby="sentiment-heading">
+      <div className="sentiment-intro">
+        <h2 id="sentiment-heading" className="section-title">Classificação de Sentimentos</h2>
+        <p className="section-lead">
           Veja como classificamos feedbacks de clientes para priorizar atendimento, produto e retenção.
         </p>
       </div>
-
-      {/* Terminal */}
-      <div className="max-w-2xl mx-auto rounded-xl shadow-2xl bg-[#1c1917] p-1 border border-white/10">
-        <div className="h-full w-full rounded-lg bg-black/50 p-4 md:p-6 flex flex-col gap-4">
-          {/* Header */}
-          <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-            <MazyLogo color="#c15f3c" className="w-6 h-6" />
-            <span className="text-white font-mono text-xs">MazySentiment · Análise de Feedback</span>
-          </div>
-
-          {/* Examples */}
-          <div className="flex flex-wrap gap-2">
-            {examples.map((ex, i) => (
-              <button
-                key={i}
-                onClick={() => { setInput(ex); analyze(ex); }}
-                className="text-[10px] font-mono px-3 py-1.5 rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-colors"
-              >
-                &ldquo;{ex}&rdquo;
-              </button>
-            ))}
-          </div>
-
-          {/* Input */}
-          <div className="flex gap-2">
-            <div className="flex-1 flex items-center gap-2 bg-white/5 rounded-lg px-4 py-3">
-              <span className="text-[#c15f3c] font-mono text-xs shrink-0">$&gt;</span>
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && analyze(input)}
-                placeholder="Digite um feedback de cliente..."
-                className="flex-1 bg-transparent text-white font-mono text-xs outline-none placeholder:text-gray-600"
-              />
-            </div>
-            <button
-              onClick={() => analyze(input)}
-              disabled={result?.loading}
-              className="px-4 py-3 rounded-lg bg-[#c15f3c] text-white font-mono text-xs font-bold hover:opacity-90 transition-opacity disabled:opacity-50"
+      <div className="sentiment-workbench">
+        <div className="sentiment-brand">
+          <MazyLogo color="var(--accent-text)" className="w-7 h-7 shrink-0" />
+          <span>MazySentiment · Análise de Feedback</span>
+        </div>
+        <div className="sentiment-examples">
+          {examples.map((ex) => (
+            <button key={ex} type="button" disabled={result?.loading}
+              onClick={() => { setInput(ex); analyze(ex); }}
+              className="sentiment-example"
             >
-              {result?.loading ? '...' : 'Analisar'}
+              &ldquo;{ex}&rdquo;
+            </button>
+          ))}
+        </div>
+        <form onSubmit={(event) => { event.preventDefault(); analyze(input); }} className="sentiment-form">
+          <label htmlFor="sentiment-input">Feedback de cliente para analisar</label>
+          <div className="sentiment-input-row">
+            <input id="sentiment-input" aria-label="Feedback de cliente para analisar"
+              type="text" value={input} disabled={result?.loading}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Digite um feedback de cliente..."
+            />
+            <button type="submit" disabled={result?.loading || input.trim().length < 3} className="button-primary">
+              {result?.loading ? 'Analisando...' : 'Analisar'}
             </button>
           </div>
-
-          {/* Result */}
+        </form>
+        <div className="sentiment-response" aria-live="polite" aria-atomic="true">
           {result && !result.loading && (
-            <div className="mt-2 p-4 rounded-lg bg-white/5 border border-white/10">
-              <div className="flex items-center gap-3">
-                <span className="text-white font-mono text-xs opacity-50">Categoria:</span>
-                <span
-                  className="font-mono text-xs font-bold uppercase px-3 py-1 rounded-full"
-                  style={{
-                    color: categoryColors[result.category],
-                    backgroundColor: `${categoryColors[result.category]}15`,
-                    border: `1px solid ${categoryColors[result.category]}30`,
-                  }}
-                >
-                  {result.category}
-                </span>
-              </div>
-              {error && (
-                <div className="mt-3 text-[10px] font-mono text-red-300/80">
-                  {error}
-                </div>
-              )}
-            </div>
+            <p className="sentiment-result">
+              <span>Categoria:</span>
+              <strong>{result.category}</strong>
+            </p>
           )}
-
+          {error && <p role="status" className="sentiment-error">{error}</p>}
           {result?.loading && (
-            <div className="mt-2 p-4 rounded-lg bg-white/5 border border-white/10 flex items-center gap-3">
-              <div className="w-4 h-4 border-2 border-[#c15f3c] border-t-transparent rounded-full animate-spin" />
-              <span className="text-white font-mono text-xs opacity-50">Classificando com IA...</span>
-            </div>
+            <p className="sentiment-loading" role="status">
+              <span className="sentiment-spinner" aria-hidden="true" />
+              Classificando com IA...
+            </p>
           )}
-
-          {/* Disclaimer */}
-          <p className="text-[9px] font-mono text-gray-600 text-center mt-2">
-            Exemplo funcional. Em produção, o modelo é ajustado ao vocabulário e contexto de cada cliente.
-          </p>
         </div>
+        <p className="sentiment-caption">
+          Exemplo funcional. Em produção, o modelo é ajustado ao vocabulário e contexto de cada cliente.
+        </p>
       </div>
     </section>
   );

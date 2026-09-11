@@ -1,37 +1,27 @@
+const principles = [
+  { title: 'Transparência Radical', desc: 'Explicamos o que funciona e o que não funciona. Sem caixa preta.' },
+  { title: 'Preço Justo & Real', desc: 'Soluções dimensionadas para a realidade do PME brasileiro.' },
+  { title: 'Cliente Autônomo', desc: 'Entregamos projeto com começo, meio e fim. Seu time opera sozinho depois.' },
+];
+
 export default function Manifesto() {
   return (
-    <section id="manifesto" className="grid grid-cols-1 md:grid-cols-2 gap-0 border rounded-xl md:rounded-3xl overflow-hidden" style={{ borderColor: 'var(--border)' }}>
-      <div className="p-6 md:p-16 flex flex-col justify-center space-y-6 bg-[var(--color-terracotta)]">
-        <div className="w-12 h-1 bg-white/20 mb-4" />
-        <h3 className="text-2xl md:text-4xl font-bold text-white tracking-tighter">
-          &ldquo;Labs&rdquo; não é marketing.<br />É método.
-        </h3>
-        <p className="text-white/80 font-medium max-w-sm">
+    <section id="manifesto" aria-labelledby="manifesto-heading" className="scroll-mt-8 border-t pt-12 md:pt-20" style={{ borderColor: 'var(--border)' }}>
+      <div className="max-w-4xl">
+        <h2 id="manifesto-heading" className="font-serif text-[clamp(2.5rem,5.4vw,4.75rem)] font-normal leading-[1.12] tracking-[-0.045em] text-balance" style={{ color: 'var(--text)' }}>
+          Entender o problema vem antes do código.
+        </h2>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed md:mt-8 md:text-xl" style={{ color: 'var(--muted, var(--text))' }}>
           A MazyLabs nasceu da insatisfação com promessas vazias. Somos engenheiros e cientistas obcecados por rigor. Se não podemos medir, não entregamos.
         </p>
-        <div className="pt-8">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">Manifesto 01</span>
-        </div>
       </div>
-
-      <div className="p-6 md:p-16 flex flex-col justify-center space-y-8" style={{ backgroundColor: 'var(--card)' }}>
-        <div className="space-y-4">
-          {[
-            { n: '1', title: 'Transparência Radical', desc: 'Explicamos o que funciona e o que não funciona. Sem caixa preta.' },
-            { n: '2', title: 'Preço Justo & Real', desc: 'Soluções dimensionadas para a realidade do PME brasileiro.' },
-            { n: '3', title: 'Cliente Autônomo', desc: 'Entregamos projeto com começo, meio e fim. Seu time opera sozinho depois.' },
-          ].map((item) => (
-            <div key={item.n} className="flex items-start gap-4">
-              <div className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-1 bg-[var(--color-stone)]">
-                {item.n}
-              </div>
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-wide mb-1">{item.title}</h4>
-                <p className="text-xs opacity-60">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="mt-12 md:mt-16 md:ml-[17%]">
+        {principles.map((principle) => (
+          <div key={principle.title} className="grid gap-3 border-t py-7 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:gap-10 md:py-9" style={{ borderColor: 'var(--border)' }}>
+            <h3 className="text-xl font-medium tracking-tight md:text-2xl" style={{ color: 'var(--accent-text, var(--color-terracotta))' }}>{principle.title}</h3>
+            <p className="max-w-md text-base leading-relaxed md:text-lg" style={{ color: 'var(--muted, var(--text))' }}>{principle.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

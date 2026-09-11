@@ -1,7 +1,6 @@
 import MazyLogo from './MazyLogo';
 
-const WHATSAPP_URL = 'https://wa.me/5511979810832?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20MazyLabs%20e%20gostaria%20de%20saber%20mais.';
-const LINKEDIN_URL = 'https://www.linkedin.com/in/vin%C3%ADciusanjos/';
+import { WHATSAPP_URL } from '../lib/site';
 
 export default function Footer() {
   return (
@@ -30,9 +29,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-3">
           <span className="opacity-40 mb-1">Contato</span>
-          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-terracotta)] transition-colors">LinkedIn</a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-terracotta)] transition-colors">WhatsApp</a>
-          <a href="mailto:vinicius.anjos@mazylabs.com" className="hover:text-[var(--color-terracotta)] transition-colors">Email</a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-terracotta)] transition-colors">WhatsApp · (11) 94541-0931</a>
         </div>
       </div>
     </footer>
