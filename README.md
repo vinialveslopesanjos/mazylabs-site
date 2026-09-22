@@ -47,10 +47,10 @@ Crie um `.env.local` na raiz:
 
 ```env
 OPENROUTER_API_KEY="sua_key_aqui"
-OPENROUTER_MODEL="nvidia/nemotron-3.5-lightning:free"
+OPENROUTER_MODEL="liquid/lfm-2.5-2.6b:free"
 ```
 
-Crie a chave no [OpenRouter](https://openrouter.ai/settings/keys). Ela fica somente no servidor: nunca use o prefixo `NEXT_PUBLIC_`. O modelo padrão `nvidia/nemotron-3.5-lightning:free` usa modelos gratuitos; também é possível escolher um modelo com sufixo `:free`. A disponibilidade e as cotas dependem do OpenRouter.
+Crie a chave no [OpenRouter](https://openrouter.ai/settings/keys). Ela fica somente no servidor: nunca use o prefixo `NEXT_PUBLIC_`. O modelo padrão `liquid/lfm-2.5-2.6b:free` usa modelos gratuitos; também é possível escolher um modelo com sufixo `:free`. A disponibilidade e as cotas dependem do OpenRouter.
 
 ## Comandos
 
@@ -67,7 +67,7 @@ O site é hospedado na **Vercel** com deploy automático via `git push` para a b
 
 Configurar no painel da Vercel:
 - `OPENROUTER_API_KEY` → Settings → Environment Variables (secret)
-- `OPENROUTER_MODEL=nvidia/nemotron-3.5-lightning:free` (opcional)
+- `OPENROUTER_MODEL=liquid/lfm-2.5-2.6b:free` (opcional)
 
 Use o preset Next.js e o diretório de saída padrão; remova qualquer override para `out`. A rota POST `/api/sentiment` precisa de uma função no servidor, portanto não use exportação estática. Após configurar a chave, faça um novo deploy.
 

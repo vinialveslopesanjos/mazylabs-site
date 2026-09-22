@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { parseCategory, SYSTEM_PROMPT } from '@/app/lib/sentiment';
 
 export const maxDuration = 35;
-const DEFAULT_MODEL = 'nvidia/nemotron-3.5-lightning:free';
+const DEFAULT_MODEL = 'liquid/lfm-2.5-2.6b:free';
 
 function failure(error: string, status: number) {
   return NextResponse.json({ error }, { status });
@@ -37,8 +37,7 @@ export async function POST(req: Request) {
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: text },
         ],
-        max_tokens: 256,
-        reasoning: { enabled: false },
+        max_tokens: 2048,
         temperature: 0,
       }),
       signal: AbortSignal.timeout(30000),

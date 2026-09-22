@@ -34,7 +34,7 @@ test('sends server credentials and free model, returns only validated category',
     assert.equal(url, 'https://openrouter.ai/api/v1/chat/completions');
     assert.equal(options.headers.Authorization, 'Bearer test-secret');
     const body = JSON.parse(options.body);
-    assert.equal(body.model, 'nvidia/nemotron-3.5-lightning:free');
+    assert.equal(body.model, 'liquid/lfm-2.5-2.6b:free');
     assert.equal(body.messages[1].content, 'Muito bom');
     return Response.json({ choices: [{ message: { content: 'alegria' } }] });
   });
