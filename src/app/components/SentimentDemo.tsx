@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import MazyLogo from './MazyLogo';
-import { parseCategory, SYSTEM_PROMPT } from '../lib/sentiment';
+import { parseCategory } from '../lib/sentiment';
 import type { Category } from '../lib/sentiment';
 
 const examples = [
@@ -18,29 +18,19 @@ interface Result {
 }
 
 
-// Gemini 2.0 Flash — Google AI Studio (gratuito, 1500 req/dia)
-// API key restrita ao domínio mazylabs.com no Google Cloud Console
-async function analyzeWithGemini(text: string): Promise<Category> {
-  const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
-  if (!apiKey || apiKey === 'cole_sua_key_aqui') throw new Error('API key não configurada');
-
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-  const res = await fetch(url, {
+async function analyzeFeedback(text: string): Promise<Category> {
+  const res = await fetch('/api/sentiment', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
-      contents: [{ role: 'user', parts: [{ text }] }],
-      generationConfig: { maxOutputTokens: 20, temperature: 0 },
-    }),
-    signal: AbortSignal.timeout(10000),
+    body: JSON.stringify({ text: text.trim() }),
+    signal: AbortSignal.timeout(35000),
   });
-
-  if (!res.ok) throw new Error(`Gemini ${res.status}`);
+  if (res.status === 429) throw new Error('O limite de análises gratuitas foi atingido. Tente novamente mais tarde.');
+  if (!res.ok) throw new Error('Não foi possível analisar agora. Tente novamente em instantes.');
   const data = await res.json();
-  const content: string = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
-  return parseCategory(content);
+  const category = typeof data.category === 'string' ? parseCategory(data.category) : null;
+  if (!category) throw new Error('A IA não retornou uma categoria válida. Tente novamente.');
+  return category;
 }
 
 export default function SentimentDemo() {
@@ -54,10 +44,10 @@ export default function SentimentDemo() {
     setResult({ category: 'dúvida', loading: true });
 
     try {
-      const category = await analyzeWithGemini(text);
+      const category = await analyzeFeedback(text);
       setResult({ category, loading: false });
-    } catch {
-      setError('A demonstração está indisponível neste ambiente. Tente novamente mais tarde.');
+    } catch (cause) {
+      setError(cause instanceof Error && cause.name === 'Error' ? cause.message : 'A análise demorou mais que o esperado. Tente novamente.');
       setResult(null);
     }
   };
@@ -89,7 +79,7 @@ export default function SentimentDemo() {
           <label htmlFor="sentiment-input">Feedback de cliente para analisar</label>
           <div className="sentiment-input-row">
             <input id="sentiment-input" aria-label="Feedback de cliente para analisar"
-              type="text" value={input} disabled={result?.loading}
+              type="text" maxLength={1000} value={input} disabled={result?.loading}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Digite um feedback de cliente..."
             />

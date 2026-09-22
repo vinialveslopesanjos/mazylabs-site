@@ -4,12 +4,12 @@ Site institucional da [MazyLabs](https://www.mazylabs.com) — empresa de dados,
 
 ## Stack
 
-- **Next.js 16** (App Router, static export)
+- **Next.js 16** (App Router, API no servidor)
 - **React 19**
 - **Tailwind CSS 4**
 - **TypeScript 5**
 - **vis-network + vis-data** — grafos interativos
-- **Gemini 2.0 Flash** (Google AI Studio) — demo de classificação de sentimentos
+- **OpenRouter** (modelos gratuitos) — demo de classificação de sentimentos
 - **pnpm 10**
 
 ## Estrutura
@@ -25,7 +25,7 @@ src/
       CaseStudies.tsx     # Cases: Itaú (grafo interativo), PicPay, Nubank, XP
       NetworkGraph.tsx    # Grafo vis-network: MazyLabs ↔ clientes
       ItauGraph.tsx       # Grafo vis-network: rede de risco (demo Itaú)
-      SentimentDemo.tsx   # Terminal interativo com Gemini 2.0 Flash
+      SentimentDemo.tsx   # Demonstração interativa via /api/sentiment
       Manifesto.tsx       # Valores e filosofia
       VisualIdentity.tsx  # Cartão de visita + console mockup
       CTABanner.tsx       # Faixa de CTA terracotta
@@ -46,16 +46,17 @@ public/
 Crie um `.env.local` na raiz:
 
 ```env
-NEXT_PUBLIC_GEMINI_API_KEY="sua_key_aqui"
+OPENROUTER_API_KEY="sua_key_aqui"
+OPENROUTER_MODEL="nvidia/nemotron-3.5-lightning:free"
 ```
 
-A key é obtida gratuitamente no [Google AI Studio](https://aistudio.google.com). Limite: 1500 req/dia no free tier. Recomenda-se restringir por HTTP referrer no Google Cloud Console (domínio: `mazylabs.com`).
+Crie a chave no [OpenRouter](https://openrouter.ai/settings/keys). Ela fica somente no servidor: nunca use o prefixo `NEXT_PUBLIC_`. O modelo padrão `nvidia/nemotron-3.5-lightning:free` usa modelos gratuitos; também é possível escolher um modelo com sufixo `:free`. A disponibilidade e as cotas dependem do OpenRouter.
 
 ## Comandos
 
 ```bash
 pnpm install      # instalar dependências
-pnpm dev          # servidor de desenvolvimento (localhost:3000)
+pnpm dev          # servidor de desenvolvimento (localhost:4000)
 pnpm build        # build de produção
 pnpm start        # rodar o build localmente
 ```
@@ -65,7 +66,12 @@ pnpm start        # rodar o build localmente
 O site é hospedado na **Vercel** com deploy automático via `git push` para a branch `main`.
 
 Configurar no painel da Vercel:
-- `NEXT_PUBLIC_GEMINI_API_KEY` → Settings → Environment Variables
+- `OPENROUTER_API_KEY` → Settings → Environment Variables (secret)
+- `OPENROUTER_MODEL=nvidia/nemotron-3.5-lightning:free` (opcional)
+
+Use o preset Next.js e o diretório de saída padrão; remova qualquer override para `out`. A rota POST `/api/sentiment` precisa de uma função no servidor, portanto não use exportação estática. Após configurar a chave, faça um novo deploy.
+
+A API valida feedbacks de 3 a 1000 caracteres e retorna somente categorias válidas. Respostas inválidas, indisponibilidade e limites do provedor são tratados sem expor a chave ou detalhes internos.
 
 ## Responsividade
 
